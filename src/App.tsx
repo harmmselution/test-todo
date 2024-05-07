@@ -1,10 +1,12 @@
+import { TodoPageLayout } from './layouts/TodoPageLayout/TodoPageLayout.tsx';
+import { Header } from './components/Header/Header.tsx';
 
 function App() {
   return (
-    <>
-        ss
-    </>
-  )
+    <TodoPageLayout>
+      <Header />
+    </TodoPageLayout>
+  );
 }
 
-export default App
+export default App;
