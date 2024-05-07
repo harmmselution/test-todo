@@ -1,5 +1,23 @@
+@import "src/styles/variables";
+
 .header {
-  background-color: red;
-  height: 20px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: $purple;
+  border-radius: 12px;
+  padding: 60px 20px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 34px;
+  color: $white;
+}
+
+.addTodo {
+  cursor: pointer;
+  background: none;
+  color: $white;
+  font-size: 30px;
 }

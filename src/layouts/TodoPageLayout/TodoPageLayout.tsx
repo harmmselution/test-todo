@@ -1,11 +1,11 @@
 import { FC, ReactNode } from 'react';
 import classes from './TodoPageLayout.module.scss';
 
-interface TodoPageLayout {
+interface TodoPageLayoutProps {
   children: ReactNode;
 }
 
-export const TodoPageLayout: FC<TodoPageLayout> = ({ children }) => {
+export const TodoPageLayout: FC<TodoPageLayoutProps> = ({ children }) => {
   return (
     <main className={classes.pageLayout}>
       <div className={classes.pageLayoutWrapper}>{children}</div>

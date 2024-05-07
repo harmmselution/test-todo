@@ -1,0 +1,10 @@
+@import "src/styles/variables";
+
+.textField {
+  font-weight: 400;
+  font-size: 22px;
+  color: $grey;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #8b8787;
+  outline: none;
+}
