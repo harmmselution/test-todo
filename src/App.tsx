@@ -1,12 +1,12 @@
 import { TodoPageLayout } from "./layouts/TodoPageLayout/TodoPageLayout.tsx";
 import { Header } from "./components/Header/Header.tsx";
-import { TodosContainer } from "./components/TodosContainer/TodosContainer.tsx";
+import { TodosContent } from "./components/TodosContent/TodosContent.tsx";
 
 function App() {
   return (
     <TodoPageLayout>
       <Header />
-      <TodosContainer />
+      <TodosContent />
     </TodoPageLayout>
   );
 }
