@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { arrayMove } from "@dnd-kit/sortable";
 
 export type Filter = "all" | "completed" | "uncompleted";
 
@@ -35,6 +36,9 @@ export const todosSlice = createSlice({
     },
     deleteTodo: (state, action: PayloadAction<string>) => {
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
+    },
+    onDragTodo: (state, action: PayloadAction<{ originalPos: number; newPos: number }>) => {
+      state.todos = arrayMove(state.todos, action.payload.originalPos, action.payload.newPos);
     },
     setFilter: (state, action: PayloadAction<Filter>) => {
       state.filter = action.payload;

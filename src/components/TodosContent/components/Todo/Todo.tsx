@@ -4,6 +4,8 @@ import { FC } from "react";
 import { todosActions } from "../../../../redux/slices/todosSlice.ts";
 import { useAppDispatch } from "../../../../hooks/reduxHooks.ts";
 import classNames from "classnames";
+import { useSortable } from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 
 interface TodoProps {
   id: string;
@@ -14,8 +16,15 @@ interface TodoProps {
 
 export const Todo: FC<TodoProps> = ({ title, description, completed, id }) => {
   const dispatch = useAppDispatch();
+  const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id });
+
+  const style = {
+    transition,
+    transform: CSS.Transform.toString(transform),
+  };
+
   return (
-    <div className={classes.todo}>
+    <div className={classes.todo} ref={setNodeRef} style={style} {...attributes} {...listeners}>
       <div className={classes.description}>
         <p>{title}</p>
         <p>{description}</p>
