@@ -22,6 +22,7 @@ export const AddTaskForm: FC<AddTaskFormProps> = ({ onClose }) => {
         id: uuidv4(),
         title: formData.title,
         description: formData.description,
+        completed: false,
       })
     );
     onClose();

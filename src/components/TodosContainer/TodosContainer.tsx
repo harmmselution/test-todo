@@ -7,9 +7,13 @@ export const TodosContainer = () => {
   const { todos } = useAppSelector(todosSelector);
   return (
     <div className={classes.todosContainer}>
-      {todos.map((todo) => (
-        <Todo key={todo.id} />
-      ))}
+      {todos.length ? (
+        todos.map((todo) => <Todo {...todo} key={todo.id} />)
+      ) : (
+        <p className={classes.noTodos}>
+          No todos yet :( <br /> Add your first todo!
+        </p>
+      )}
     </div>
   );
 };

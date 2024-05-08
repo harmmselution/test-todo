@@ -16,6 +16,9 @@
 }
 
 .addTodo {
+  border: 2px solid $dark-purple;
+  border-radius: 20px;
+  padding: 10px;
   cursor: pointer;
   background: none;
   color: $white;

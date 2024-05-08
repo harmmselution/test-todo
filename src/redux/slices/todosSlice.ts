@@ -1,9 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface ITodo {
-  id: number;
+  id: string;
   title: string;
   description: string;
+  completed: boolean;
 }
 
 interface TodosSlice {
@@ -19,7 +20,15 @@ export const todosSlice = createSlice({
   initialState,
   reducers: {
     addTodosHandler: (state, action: PayloadAction<ITodo>) => {
-      state.todos = [action.payload];
+      state.todos.push(action.payload);
+    },
+    toggleTodoStatus: (state, action: PayloadAction<string>) => {
+      state.todos = state.todos.map((todo) =>
+        todo.id === action.payload ? { ...todo, completed: !todo.completed } : todo
+      );
+    },
+    deleteTodo: (state, action: PayloadAction<string>) => {
+      state.todos = state.todos.filter((todo) => todo.id !== action.payload);
     },
   },
 });
