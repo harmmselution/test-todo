@@ -9,10 +9,12 @@ interface ITodo {
 
 interface TodosSlice {
   todos: ITodo[];
+  completedNumber: number;
 }
 
 const initialState: TodosSlice = {
   todos: [],
+  completedNumber: 0,
 };
 
 export const todosSlice = createSlice({
