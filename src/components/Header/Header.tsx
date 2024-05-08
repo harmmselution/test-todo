@@ -1,8 +1,8 @@
 import classes from "./Header.module.scss";
-import { Modal } from "../../ui/Modal/Modal.tsx";
 
 import { AddTaskForm } from "../AddTaskForm/AddTaskForm.tsx";
 import { useState } from "react";
+import { Modal } from "../../ui/Modal/Modal.tsx";
 
 export const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,7 +13,7 @@ export const Header = () => {
         Add todo
       </button>
       <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <AddTaskForm />
+        <AddTaskForm onClose={() => setIsModalOpen(false)} />
       </Modal>
     </header>
   );

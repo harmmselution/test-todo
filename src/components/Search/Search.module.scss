@@ -1,0 +1,21 @@
+@import "src/styles/variables";
+
+.searchWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-left: 20px;
+  border: 2px solid $grey;
+  border-radius: 8px;
+  background-color: $white;
+
+  & > input {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    padding-block: 16px;
+  }
+}
