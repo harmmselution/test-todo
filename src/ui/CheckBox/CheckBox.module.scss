@@ -1,0 +1,23 @@
+@import "src/styles/variables";
+
+.customCheckbox {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $white;
+  background-image: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid $grey;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 4px;
+  transition: 120ms background-color ease-in-out;
+}
+
+.customCheckbox:checked {
+  background-image: url('../../assets/img/svg/checkBoxIcon.svg');
+  background-color: $dark-purple;
+  border-color: $black;
+  background-position: center;
+  background-repeat: no-repeat;
+}

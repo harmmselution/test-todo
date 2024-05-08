@@ -1,6 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface ITodo {
+export type Filter = "all" | "completed" | "uncompleted";
+
+export interface ITodo {
   id: string;
   title: string;
   description: string;
@@ -9,12 +11,14 @@ interface ITodo {
 
 interface TodosSlice {
   todos: ITodo[];
-  completedNumber: number;
+  filter: Filter;
+  searchQuery: string;
 }
 
 const initialState: TodosSlice = {
   todos: [],
-  completedNumber: 0,
+  filter: "all",
+  searchQuery: "",
 };
 
 export const todosSlice = createSlice({
@@ -31,6 +35,12 @@ export const todosSlice = createSlice({
     },
     deleteTodo: (state, action: PayloadAction<string>) => {
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
+    },
+    setFilter: (state, action: PayloadAction<Filter>) => {
+      state.filter = action.payload;
+    },
+    setSearchQuery: (state, action: PayloadAction<string>) => {
+      state.searchQuery = action.payload;
     },
   },
 });
