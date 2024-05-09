@@ -42,7 +42,7 @@ export const AddTaskForm: FC<AddTaskFormProps> = ({ onClose }) => {
           value={formData.description}
           onChange={(e) => setFormData((prev) => ({ ...prev, description: e.target.value }))}
         />
-        <Button disabled={isDisabled} onClick={handleSubmit}>
+        <Button variant='lg' disabled={isDisabled} onClick={handleSubmit}>
           Add
         </Button>
       </form>

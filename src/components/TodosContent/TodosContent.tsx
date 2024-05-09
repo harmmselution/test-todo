@@ -19,8 +19,17 @@ import { todosActions } from "../../redux/slices/todosSlice.ts";
 
 export const TodosContent = () => {
   const sensors = useSensors(
-    useSensor(PointerSensor),
-    useSensor(TouchSensor),
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: 8,
+      },
+    }),
+    useSensor(TouchSensor, {
+      activationConstraint: {
+        delay: 200,
+        tolerance: 6,
+      },
+    }),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
     })

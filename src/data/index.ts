@@ -8,15 +8,15 @@ interface filterData {
 const filterData: filterData[] = [
   {
     id: 1,
-    filterBy: "completed",
+    filterBy: "all",
   },
   {
     id: 2,
-    filterBy: "uncompleted",
+    filterBy: "completed",
   },
   {
     id: 3,
-    filterBy: "all",
+    filterBy: "uncompleted",
   },
 ];
 

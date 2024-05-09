@@ -10,8 +10,7 @@ export const Filters = () => {
   const { filter } = useAppSelector(todosSelector);
 
   return (
-    <div className={classes.filtersWrapper}>
-      <p>Sort by:</p>
+    <div className={classes.filterItems}>
       {filterData.map((filterItem) => (
         <FilterItem
           checked={filter === filterItem.filterBy}

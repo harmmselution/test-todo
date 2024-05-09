@@ -7,15 +7,21 @@
   align-items: center;
   gap: 15px;
   padding-left: 20px;
-  border: 2px solid $grey;
-  border-radius: 8px;
+  border: 2px solid $light-purple;
+  border-radius: 15px;
   background-color: $white;
 
   & > input {
     width: 100%;
     border: none;
-    border-radius: 8px;
+    border-radius: 15px;
     outline: none;
+    margin-right: 20px;
     padding-block: 16px;
+    font-size: $font-default;
+    letter-spacing: 0.2px;
+    @media screen and (max-width: 520px) {
+      font-size: $font-small;
+    }
   }
 }

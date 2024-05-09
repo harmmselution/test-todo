@@ -5,19 +5,23 @@
   appearance: none;
   background-color: $white;
   background-image: none;
-  width: 18px;
-  height: 18px;
-  border: 1px solid $grey;
+  width: 35px;
+  height: 35px;
+  border: 1px solid $white;
   cursor: pointer;
   padding: 2px;
-  border-radius: 4px;
+  border-radius: 10px;
   transition: 120ms background-color ease-in-out;
+  @media screen and (max-width: 820px) {
+    display: none;
+  }
+
 }
 
 .customCheckbox:checked {
-  background-image: url('../../assets/img/svg/checkBoxIcon.svg');
   background-color: $dark-purple;
-  border-color: $black;
+  border-color: $dark-purple;
   background-position: center;
   background-repeat: no-repeat;
 }
+
