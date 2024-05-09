@@ -1,0 +1,39 @@
+@import "src/styles/variables";
+
+.filterItem {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 10px;
+
+  .filterLabel {
+    font-size: 25px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    @media screen and (max-width: 820px) {
+      text-align: center;
+      flex-grow: 1;
+      padding: 10px;
+      border-radius: 15px;
+      background: $white;
+      font-size: $font-default;
+    }
+
+    &.checked {
+      @media screen and (max-width: 820px) {
+        background-color: $dark-purple;
+        color: $white;
+      }
+    }
+
+    @media screen and (max-width: 520px) {
+      font-size: $font-small;
+    }
+  }
+
+
+  @media screen and (max-width: 820px) {
+    width: 100%;
+    justify-content: center;
+  }
+}

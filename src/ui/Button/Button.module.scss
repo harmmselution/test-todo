@@ -1,15 +1,36 @@
 @import "src/styles/variables";
 
 .button {
-  border-radius: 15px;
-  padding-block: 18px;
+  border-radius: 20px;
+  font-size: $font-default;
+  cursor: pointer;
+}
+
+.button.sm {
+  padding: 12px;
+  background: $white;
+  color: $purple;
+  box-shadow: none;
+  @media screen and (max-width: 620px) {
+    font-size: $font-small;
+    padding: 10px;
+  }
+}
+
+.button.lg {
+  padding: 18px;
   font-weight: 600;
-  font-size: 25px;
   color: $white;
   background: rgba(76, 79, 141, 1);
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-
+  @media screen and (max-width: 620px) {
+    font-size: $font-small;
+    padding: 15px;
+    border-radius: 15px;
+  }
+  @media screen and (max-width: 620px) {
+    padding: 10px;
+    border-radius: 10px;
+  }
 }
 
 .button:disabled {

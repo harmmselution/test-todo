@@ -8,8 +8,12 @@ export const TodosInfo = () => {
 
   return (
     <div className={classes.todosInfo}>
-      <p>Uncompleted: {uncompletedTasksCount}</p>
-      <p>Completed: {completedTasksCount}</p>
+      <p className={classes.todoType}>
+        <span>Uncompleted</span> : {uncompletedTasksCount}
+      </p>
+      <p className={classes.todoType}>
+        <span>Completed</span> : {completedTasksCount}
+      </p>
     </div>
   );
 };

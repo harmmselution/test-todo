@@ -1,18 +1,39 @@
+@import "src/styles/variables";
+
+.formWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 100px 50px;
+
+  .formTitle {
+    font-size: $font-big;
+    @media screen and (max-width: 620px) {
+      font-size: $font-medium;
+    }
+    @media screen and (max-width: 620px) {
+      font-size: $font-default;
+    }
+  }
+
+  @media screen and (max-width: 620px) {
+    padding: 50px 20px;
+  }
+  @media screen and (max-width: 420px) {
+    padding: 30px 20px;
+  }
+
+}
+
 .addTaskForm {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 40px;
-}
-
-.formWrapper {
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-
-  .formTitle {
-    font-size: 35px;
+  @media screen and (max-width: 620px) {
+    gap: 20px;
   }
 }
+

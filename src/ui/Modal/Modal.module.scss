@@ -4,18 +4,22 @@
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, .7);
-  z-index: 1000;
+  z-index: 1;
 }
 
 .modal {
   position: fixed;
+  max-width: 500px;
+  width: calc(100% - 100px);
   border-radius: 12px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #FFF;
-  padding: 100px 50px;
-  z-index: 1000;
+  background-color: $white;
+  z-index: 2;
+  @media screen and (max-width: 620px) {
+    width: calc(100% - 60px);
+  }
 }
 
 .closeModal {
@@ -31,6 +35,19 @@
   background-color: $white;
   border-radius: 100%;
   cursor: pointer;
+  @media screen and (max-width: 620px) {
+    top: -20px;
+    right: -20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  & > img {
+    @media screen and (max-width: 620px) {
+      width: 10px;
+      height: 10px;
+    }
+  }
 }
 
 .lockScroll {

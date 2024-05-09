@@ -13,12 +13,14 @@ const persistConfig = {
 };
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
+//create persist config in order to connect our redux store with localstorage.So todosReducer is added to the whitelist;
+
 export const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER], //ignore this actions to synchronize correctly with redux-toolkit
       },
     }),
 });

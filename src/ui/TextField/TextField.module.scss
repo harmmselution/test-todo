@@ -2,9 +2,12 @@
 
 .textField {
   font-weight: 400;
-  font-size: 22px;
+  font-size: $font-default;
   color: $grey;
   padding-bottom: 10px;
   border-bottom: 1px solid #8b8787;
   outline: none;
+  @media screen and (max-width: 620px) {
+    font-size: $font-small;
+  }
 }

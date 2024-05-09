@@ -1,3 +1,11 @@
-.filtersWrapper {
+@import "src/styles/variables";
 
+.filterItems {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media screen and (max-width: 820px) {
+    width: 80%;
+    align-self: center;
+  }
 }
