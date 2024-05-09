@@ -10,6 +10,7 @@ export const TodosContainer = () => {
   const { todos, filter, searchQuery } = useAppSelector(todosSelector);
   const filteredTodos = filterTodos(todos, filter, searchQuery);
   const noTodosMessage = searchQuery ? "Nothing was found :(" : "No todos yet :( Add your first todo!";
+  //The SortableContext provides information via context that is consumed by the useSortable hook in Todo component
   return (
     <div className={classes.todosContainer}>
       <Search />

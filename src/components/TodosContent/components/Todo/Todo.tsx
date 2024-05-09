@@ -17,7 +17,7 @@ interface TodoProps {
 export const Todo: FC<TodoProps> = ({ title, description, completed, id }) => {
   const dispatch = useAppDispatch();
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id });
-
+  //The useSortable hook provides a set of sensible default attributes,listeners,ref,transform and transition properties  for draggable items
   const style = {
     transition,
     transform: CSS.Transform.toString(transform),

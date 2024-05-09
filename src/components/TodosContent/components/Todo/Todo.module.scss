@@ -74,10 +74,9 @@
   }
 
   .actionButton > img {
-    width: 20px;
-    height: 20px;
     @media screen and (max-width: 820px) {
-      flex-direction: column;
+      width: 20px;
+      height: 20px;
     }
   }
 

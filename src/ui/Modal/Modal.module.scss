@@ -4,7 +4,7 @@
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, .7);
-  z-index: 1000;
+  z-index: 1;
 }
 
 .modal {
@@ -16,7 +16,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: $white;
-  z-index: 1000;
+  z-index: 2;
   @media screen and (max-width: 620px) {
     width: calc(100% - 60px);
   }
